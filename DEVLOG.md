@@ -39,8 +39,8 @@
 | 地震 | USGS Earthquake API（dist≤100km 或 M5.5+ 且 ≤200km） | 每小時 |
 
 ### 部署
-- GitHub repo：`VCXD11216/tuchang-monitor`（public）
-- 網站：https://vcxd11216.github.io/tuchang-monitor/
+- GitHub repo：`NCUCCCDemonlab/Monitoring-Web`（public）
+- 網站：https://ncucccdemonlab.github.io/Monitoring-Web/
 - Secrets：`RMDGNSS_PASSWORD`、`CWA_API_KEY`（加密,不進程式碼）
 - 本機密鑰：`scripts/secrets.local.bat`（.gitignore,不上傳）
 
@@ -95,3 +95,13 @@
 7. 停用筆電舊排程(系統管理員:`Disable-ScheduledTask -TaskName "土場GNSS同步"`),避免兩台衝突。
 
 **這台需保持登入狀態**(Interactive 排程),常開+登入即可每天中午自動同步。
+
+## 2026-09-22 — 專案搬到實驗室帳號 NCUCCCDemonlab
+
+從個人帳號 `VCXD11216/tuchang-monitor` 搬到實驗室帳號 `NCUCCCDemonlab/Monitoring-Web`(Public)。
+
+- 做法:在 NCUCCCDemonlab 建空 repo `Monitoring-Web`(Public)→ 加 `VCXD11216` 為協作者 → 從本地 `git push` 全部程式碼(含歷史)。
+- 新網址:**https://ncucccdemonlab.github.io/Monitoring-Web/**
+- Pages、Secrets(RMDGNSS_PASSWORD / CWA_API_KEY)都在新 repo 重設。
+- 筆電與研究室電腦都改把 `origin` 指到新 repo,仍以 `VCXD11216`(協作者)推送。
+- 舊 repo `VCXD11216/tuchang-monitor` 確認新家正常後可刪除。
